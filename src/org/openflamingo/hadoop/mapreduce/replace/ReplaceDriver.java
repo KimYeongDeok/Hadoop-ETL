@@ -41,6 +41,12 @@ public class ReplaceDriver extends org.apache.hadoop.conf.Configured implements 
 		FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
+		job.getConfiguration().set("replace", "0::둘리::메롱,0::마이콜::바보");
+		job.getConfiguration().set("delimeter", ",");
+
+		// Reducer Task
+//		job.setNumReduceTasks(0);
+
 		// Run a Hadoop Job
 		return job.waitForCompletion(true) ? 0 : 1;
 	}

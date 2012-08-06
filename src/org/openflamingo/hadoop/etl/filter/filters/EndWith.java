@@ -9,11 +9,12 @@ import org.openflamingo.hadoop.etl.filter.FilterModel;
  * @author Youngdeok Kim
  * @since 1.0
  */
-public class Empty extends FilterClass{
-
+public class EndWith extends FilterClass {
 	@Override
 	public boolean doFilter(String coulmn, FilterModel filterModel) {
-		String trimmedCoulmn = coulmn.trim();
-		return filterModel.getTerms().equals(trimmedCoulmn);
+		String target = filterModel.getTerms();
+		int index = coulmn.lastIndexOf(target);
+		int lastWordPosition = coulmn.length() - target.length();
+		return index == lastWordPosition;
 	}
 }

@@ -1,6 +1,7 @@
 package org.openflamingo.hadoop.etl.filter.filters;
 
 import org.openflamingo.hadoop.etl.filter.FilterClass;
+import org.openflamingo.hadoop.etl.filter.FilterModel;
 
 /**
  * Description.
@@ -9,15 +10,10 @@ import org.openflamingo.hadoop.etl.filter.FilterClass;
  * @since 1.0
  */
 public class NotEmpty extends FilterClass{
-	public NotEmpty(int columnIndex) {
-		super(columnIndex);
-	}
-	public NotEmpty() {
-	}
 
 	@Override
-	public boolean doFilter(String coulmn) {
+	public boolean doFilter(String coulmn, FilterModel filterModel) {
 		String trimmedCoulmn = coulmn.trim();
-		return !terms.equals(trimmedCoulmn);
+		return !filterModel.getTerms().equals(trimmedCoulmn);
 	}
 }

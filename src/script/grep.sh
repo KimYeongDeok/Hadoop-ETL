@@ -1,9 +1,9 @@
 #!/bin/sh
 
 UCLOUD="root@14.63.225.83"
-MAPREDUCE="aggregate.AggregateDriver"
+MAPREDUCE="grep.GrepDriver"
 INPUT="youngdeok/etl_data/"
-OUTPUT="youngdeok/etl_aggregate/output"
+OUTPUT="youngdeok/etl_grep/output"
 
 ssh $UCLOUD hadoop fs -rmr $OUTPUT
 ssh $UCLOUD hadoop jar /root/youngdeok/hadoop-example.jar org.openflamingo.hadoop.mapreduce.$MAPREDUCE $INPUT $OUTPUT

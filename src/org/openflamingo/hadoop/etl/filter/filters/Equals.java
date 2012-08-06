@@ -1,6 +1,7 @@
 package org.openflamingo.hadoop.etl.filter.filters;
 
 import org.openflamingo.hadoop.etl.filter.FilterClass;
+import org.openflamingo.hadoop.etl.filter.FilterModel;
 
 /**
  * Description.
@@ -9,16 +10,9 @@ import org.openflamingo.hadoop.etl.filter.FilterClass;
  * @since 1.0
  */
 public class Equals extends FilterClass {
-	public Equals(String terms, int columnIndex) {
-		super(terms, columnIndex);
-	}
-	public Equals(String terms) {
-		super(terms);
-	}
-
 	@Override
-	public boolean doFilter(String coulmn) {
-		return terms.equals(coulmn);
+	public boolean doFilter(String coulmn, FilterModel filterModel) {
+		return filterModel.getTerms().equals(coulmn);
 	}
 
 }

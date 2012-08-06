@@ -1,5 +1,7 @@
 package org.openflamingo.hadoop.etl.filter;
 
+import org.openflamingo.hadoop.etl.utils.Row;
+
 import java.util.ArrayList;
 
 /**
@@ -24,15 +26,38 @@ public class FilterCriteria {
 		this.coulmns = devideByDelimeter(row);
 	}
 
-	public FilterCriteria doFilter() throws InterruptedException {
+	public String parseFilterCommand(String filterCommand, String delimeter){
+		String[] filterCommands = Row.parseByDelimeter(filterCommand, delimeter);
+		for (String filter : filterCommands) {
+			String[] commands = Row.parseByDelimeter(filter, Row.COMMAND_DELIMETER);
+
+			String commandName = commands[0];
+			int columnIndex = Integer.valueOf(commands[1]);
+			String terms = "";
+
+			if(commands.length > 2)
+				terms = commands[2];
+
+			FilterModel filterModel = new FilterModel();
+			filterModel.setColumnIndex(columnIndex);
+			filterModel.setTerms(terms);
+
+			addFilter(FilterHouse.buildFilter(commandName, filterModel));
+		}
+
+		return null;
+	}
+	public FilterCriteria doFilter(String row) throws InterruptedException {
+		setCoulmns(row);
+
 		if(filters == null || filters.size() == 0)
 			return this;
 
 		for (Filter filter : filters) {
-			this.coulmns = filter.service(coulmns);
-			if(coulmns == null)
+			if(filter.service(coulmns))
 				return this;
 		}
+		coulmns = null;
 		return this;
 	}
 	public void addFilter(Filter filter){
@@ -68,12 +93,13 @@ public class FilterCriteria {
 		return row.split(delimeter);
 	}
 
-	private FilterCriteria filter(Filter filter) throws InterruptedException {
-		if(filter == null)
-			return this;
-		if(coulmns == null || coulmns.length == 0)
-			return this;
-		this.coulmns = filter.service(coulmns);
-		return this;
-	}
+//	private FilterCriteria filter(Filter filter) throws InterruptedException {
+//		if(filter == null)
+//			return this;
+//		if(coulmns == null || coulmns.length == 0)
+//			return this;
+//		this.coulmns = filter.service(coulmns);
+//		return this;
+//	}
+
 }

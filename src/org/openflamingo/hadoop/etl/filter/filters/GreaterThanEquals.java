@@ -9,11 +9,11 @@ import org.openflamingo.hadoop.etl.filter.FilterModel;
  * @author Youngdeok Kim
  * @since 1.0
  */
-public class Empty extends FilterClass{
-
+public class GreaterThanEquals extends FilterClass {
 	@Override
 	public boolean doFilter(String coulmn, FilterModel filterModel) {
-		String trimmedCoulmn = coulmn.trim();
-		return filterModel.getTerms().equals(trimmedCoulmn);
+		int thanValue = Integer.valueOf(filterModel.getTerms());
+		int value = Integer.valueOf(coulmn);
+		return value > thanValue;
 	}
 }

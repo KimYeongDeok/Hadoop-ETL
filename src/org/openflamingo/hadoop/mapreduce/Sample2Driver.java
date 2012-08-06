@@ -8,7 +8,10 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.ToolRunner;
+import org.openflamingo.hadoop.mapreduce.clean.CleanMapper;
 import org.openflamingo.hadoop.util.HdfsUtils;
+
+import java.util.Arrays;
 
 /**
  * Command Line Parser를 이용한 Hadoop MapReduce Sample Driver.
@@ -20,9 +23,9 @@ public class Sample2Driver extends org.apache.hadoop.conf.Configured implements 
 	 */
 	private final String[][] requiredOptions =
 		{
-			{"i", "입력 경로를 지정해 주십시오. 입력 경로가 존재하지 않으면 MapReduce가 동작할 수 없습니다."},
-			{"o", "출력 경로를 지정해 주십시오."},
-			{"d", "컬럼의 구분자를 지정해주십시오. CSV 파일의 컬럼을 처리할 수 없습니다."},
+			{"input", "입력 경로를 지정해 주십시오. 입력 경로가 존재하지 않으면 MapReduce가 동작할 수 없습니다."},
+			{"output", "출력 경로를 지정해 주십시오."},
+			{"delimiter", "컬럼의 구분자를 지정해주십시오. CSV 파일의 컬럼을 처리할 수 없습니다."},
 		};
 
 	/**
@@ -32,10 +35,13 @@ public class Sample2Driver extends org.apache.hadoop.conf.Configured implements 
 	 */
 	private static Options getOptions() {
 		Options options = new Options();
-		options.addOption("i", "input", true, "입력 경로 (필수)");
-		options.addOption("o", "output", true, "출력 경로 (필수)");
-		options.addOption("d", "delimiter", true, "컬럼 구분자 (필수)");
-		options.addOption("od", "delete", false, "출력 경로가 이미 존재하는 경우 삭제");
+		options.addOption("input", "input", true, "입력 경로 (필수)");
+		options.addOption("output", "output", true, "출력 경로 (필수)");
+		options.addOption("delimiter", "delimiter", true, "컬럼 구분자 (필수)");
+		options.addOption("clean", "clean", false, "입력값 (필수)");
+		options.addOption("delete", "delete", false, "출력 경로가 이미 존재하는 경우 삭제");
+		//		options.addOption("filter", "filter", false,  "입력값 (필수)");
+		//		options.addOption("replace", "replace", false,  "입력값 (필수)");
 		return options;
 	}
 
@@ -86,6 +92,7 @@ public class Sample2Driver extends org.apache.hadoop.conf.Configured implements 
 		CommandLineParser parser = new BasicParser();
 		CommandLine cmd = parser.parse(options, args);
 
+
 		// 파라미터를 검증한다.
 		for (String[] requiredOption : requiredOptions) {
 			if (!cmd.hasOption(requiredOption[0])) {
@@ -96,25 +103,30 @@ public class Sample2Driver extends org.apache.hadoop.conf.Configured implements 
 
 		////////////////////////////////////////
 		// 파라미터를 Hadoop Configuration에 추가한다
-		////////////////////////////////////////
+				////////////////////////////////////////
 
-		if (cmd.hasOption("i")) {
-			FileInputFormat.addInputPaths(job, cmd.getOptionValue("i"));
+		if (cmd.hasOption("input")) {
+			FileInputFormat.addInputPaths(job, cmd.getOptionValue("input"));
 		}
 
-		if (cmd.hasOption("o")) {
-			FileOutputFormat.setOutputPath(job, new Path(cmd.getOptionValue("o")));
+		if (cmd.hasOption("output")) {
+			FileOutputFormat.setOutputPath(job, new Path(cmd.getOptionValue("output")));
 		}
 
-		if (cmd.hasOption("d")) {
-			job.getConfiguration().set("delimiter", cmd.getOptionValue("d"));
+		if (cmd.hasOption("delimiter")) {
+			job.getConfiguration().set("delimiter", cmd.getOptionValue("delimiter"));
 		}
 
 		// 옵션을 지정한 경우 출력 경로를 삭제한다.
-		if (cmd.hasOption("od")) {
-			if (HdfsUtils.isExist(cmd.getOptionValue("o"))) {
-				HdfsUtils.deleteFromHdfs(cmd.getOptionValue("o"));
-			}
+//		if (cmd.hasOption("delete")) {
+//			if (HdfsUtils.isExist(cmd.getOptionValue("delete"))) {
+//				HdfsUtils.deleteFromHdfs(cmd.getOptionValue("delete"));
+//			}
+//		}
+
+		if (cmd.hasOption("clean")) {
+			job.setMapperClass(CleanMapper.class);
+			job.getConfiguration().set("clean", cmd.getOptionValue("clean"));
 		}
 
 		return 0;

@@ -1,4 +1,4 @@
-package org.openflamingo.hadoop.mapreduce.filter;
+package org.openflamingo.hadoop.mapreduce.grep;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.NullWritable;
@@ -16,20 +16,20 @@ import org.apache.hadoop.util.ToolRunner;
  * @author Youngdeok Kim
  * @since 1.0
  */
-public class FilterDriver extends org.apache.hadoop.conf.Configured implements org.apache.hadoop.util.Tool {
+public class GrepDriver extends org.apache.hadoop.conf.Configured implements org.apache.hadoop.util.Tool {
 
 	public static void main(String[] args) throws Exception {
-		int res = ToolRunner.run(new FilterDriver(), args);
+		int res = ToolRunner.run(new GrepDriver(), args);
 		System.exit(res);
 	}
 
 	public int run(String[] args) throws Exception {
 		Job job = new Job();
 
-		job.setJarByClass(FilterDriver.class);
+		job.setJarByClass(GrepDriver.class);
 
 		// Mapper Class
-		job.setMapperClass(FilterMapper.class);
+		job.setMapperClass(GrepMapper.class);
 
 		// Output Key/Value
 		job.setMapOutputKeyClass(NullWritable.class);
@@ -41,7 +41,7 @@ public class FilterDriver extends org.apache.hadoop.conf.Configured implements o
 		FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
-		job.getConfiguration().set("filter", "EQ::0::둘리,EQ::0::마이콜");
+		job.getConfiguration().set("grep", "둘리");
 		job.getConfiguration().set("delimeter", ",");
 
 		// Reducer Task

@@ -7,59 +7,44 @@ package org.openflamingo.hadoop.etl.filter;
  * @since 1.0
  */
 public abstract class FilterClass implements Filter{
-	protected String terms;
-	protected int columnIndex = -1;
+	protected FilterModel filterModel;
 
-	public FilterClass(int columnIndex) {
-		this.columnIndex = columnIndex;
-		this.terms = "";
-	}
+//	public FilterClass(String terms, int columnIndex) {
+//		this.terms = terms;
+//		this.columnIndex = columnIndex;
+//	}
 
-	public FilterClass(String terms, int columnIndex) {
-		this.terms = terms;
-		this.columnIndex = columnIndex;
-	}
+	public boolean service(String[] coulmns) throws InterruptedException {
+		boolean success = false;
 
-	public FilterClass(String terms) {
-		this.terms = terms;
-	}
-
-	protected FilterClass() {
-	}
-
-
-	public String[] service(String[] coulmns) throws InterruptedException {
-		String[] result = null;
-		if(coulmns.length <= columnIndex || 0 > columnIndex)
+		if(coulmns.length <= filterModel.getColumnIndex() || 0 > filterModel.getColumnIndex())
 			throw new InterruptedException("Out of CoulmnIndex");
 
-		if(columnIndex > 0)
-			result = doFilterInAllCoulmns(coulmns);
+		if(filterModel.getColumnIndex() > 0)
+			success = doFilterInAllCoulmns(coulmns);
 		else
-			result = doFilterInCoulmn(coulmns, columnIndex);
+			success = doFilterInCoulmn(coulmns, filterModel.getColumnIndex());
 
-		return result;
+		return success;
 	}
-	private String[] doFilterInCoulmn(String[] coulmns, int columnIndex) {
-		String coulumn = coulmns[columnIndex];
-
-		boolean isSuccess = doFilter(coulumn);
-		if(isSuccess)
-			return coulmns;
-		return null;
+	private boolean doFilterInCoulmn(String[] columns, int columnIndex) {
+		String column = columns[columnIndex];
+		return doFilter(column, filterModel);
 	}
 
-	private String[] doFilterInAllCoulmns(String[] coulmns){
+	private boolean doFilterInAllCoulmns(String[] coulmns){
 		boolean isSuccess = true;
-		for (String coulmn : coulmns) {
-			isSuccess = doFilter(coulmn);
-			if(!isSuccess)
-				return null;
+		for (String column : coulmns) {
+			return doFilter(column, filterModel);
 		}
-		return coulmns;
+		return false;
 	}
 
 
-	public abstract boolean doFilter(String coulmn);
+	public abstract boolean doFilter(String coulmn, FilterModel filterModel);
 
+	@Override
+	public void setFilterModel(FilterModel filterModel) {
+		this.filterModel = filterModel;
+	}
 }

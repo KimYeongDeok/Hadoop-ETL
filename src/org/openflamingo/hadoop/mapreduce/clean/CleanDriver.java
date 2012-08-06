@@ -44,6 +44,9 @@ public class CleanDriver extends org.apache.hadoop.conf.Configured implements or
 		FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
+		job.getConfiguration().set("command","0");
+		job.getConfiguration().set("delimiter",",");
+
 		// Run a Hadoop Job
 		return job.waitForCompletion(true) ? 0 : 1;
 	}
