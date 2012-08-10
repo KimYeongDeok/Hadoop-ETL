@@ -14,6 +14,6 @@ public class Empty extends FilterClass{
 	@Override
 	public boolean doFilter(String coulmn, FilterModel filterModel) {
 		String trimmedCoulmn = coulmn.trim();
-		return filterModel.getTerms().equals(trimmedCoulmn);
+		return "".equals(trimmedCoulmn);
 	}
 }

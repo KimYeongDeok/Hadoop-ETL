@@ -6,7 +6,12 @@ import org.apache.hadoop.io.Text;
 import java.io.IOException;
 import java.util.*;
 
-
+/**
+ * Description.
+ *
+ * @author Youngdeok Kim
+ * @since 1.0
+ */
 public class RankReducer extends org.apache.hadoop.mapreduce.Reducer<NullWritable, Text, NullWritable, Text> {
 
 	private String delimiter;

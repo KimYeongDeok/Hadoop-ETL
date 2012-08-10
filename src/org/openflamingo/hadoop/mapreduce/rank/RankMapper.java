@@ -11,7 +11,7 @@ import java.io.IOException;
 /**
  * Description.z
  *
- * @author Youngdeok Kimou
+ * @author Youngdeok Kim
  * @since 1.0
  */
 public class RankMapper extends Mapper<LongWritable, Text, NullWritable, Text> {
@@ -22,11 +22,10 @@ public class RankMapper extends Mapper<LongWritable, Text, NullWritable, Text> {
 	protected void setup(Context context) throws IOException, InterruptedException {
 		Configuration configuration = context.getConfiguration();
 		delimiter = configuration.get("delimiter");
-		String group = configuration.get("rank");
+		String rank = configuration.get("rank");
 		String simpleName = context.getTaskAttemptID().toString().split("_m_")[1];
 
 		startKeyPosition = configuration.getLong(simpleName, 0);
-
 		super.setup(context);
 	}
 

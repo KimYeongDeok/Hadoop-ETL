@@ -9,6 +9,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.clover" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
+    <orderEntry type="library" name="Clover IDEA Plugin" level="application" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-core:1.0.3" level="project" />
@@ -51,11 +52,12 @@
     <orderEntry type="library" name="Maven: com.thoughtworks.paranamer:paranamer-generator:2.2" level="project" />
     <orderEntry type="library" name="Maven: com.thoughtworks.qdox:qdox:1.10.1" level="project" />
     <orderEntry type="library" name="Maven: asm:asm:3.2" level="project" />
-    <orderEntry type="library" name="Maven: commons-io:commons-io:2.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-exec:1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.easymock:easymock:3.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: cglib:cglib-nodep:2.2.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.objenesis:objenesis:1.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-all:1.9.0" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-exec:1.1" level="project" />
   </component>
 </module>
 

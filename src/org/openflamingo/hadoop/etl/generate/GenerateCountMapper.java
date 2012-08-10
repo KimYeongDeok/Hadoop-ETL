@@ -1,4 +1,4 @@
-package org.openflamingo.hadoop.mapreduce.generate;
+package org.openflamingo.hadoop.etl.generate;
 
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.NullWritable;

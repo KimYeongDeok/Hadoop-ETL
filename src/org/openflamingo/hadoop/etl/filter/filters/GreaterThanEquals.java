@@ -14,6 +14,6 @@ public class GreaterThanEquals extends FilterClass {
 	public boolean doFilter(String coulmn, FilterModel filterModel) {
 		int thanValue = Integer.valueOf(filterModel.getTerms());
 		int value = Integer.valueOf(coulmn);
-		return value > thanValue;
+		return value >= thanValue;
 	}
 }

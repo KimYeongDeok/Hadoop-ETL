@@ -59,7 +59,6 @@ public class FrontDriver extends org.apache.hadoop.conf.Configured implements or
 		if (cmd.hasOption("rank"))
 			driver = new RankDriver();
 
-
 		assert driver != null;
 		driver.service(job, cmd, getConf());
 
