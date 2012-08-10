@@ -7,23 +7,22 @@ package org.openflamingo.hadoop.mapreduce.clean;
  * @since 1.0
  */
 public class CleanBuild {
+
 	public static Clean build(String command, String delimeter) {
 		int[] commands = parseCleanCommand(command);
-		Clean clean = new Clean(commands, delimeter);
-		return clean;
+		return new Clean(commands, delimeter);
 	}
 
-	private static int[] parseCleanCommand(String command) {
+	public static int[] parseCleanCommand(String command) {
 		String[] parameterCommands = command.split(",");
 		return toIntArray(parameterCommands);
 	}
 
-	public static int[] toIntArray(String[] strings){
+	public static int[] toIntArray(String[] strings) {
 		int[] ints = new int[strings.length];
 		for (int i = 0; i < ints.length; i++) {
 			ints[i] = Integer.parseInt(strings[i]);
 		}
 		return ints;
 	}
-
 }

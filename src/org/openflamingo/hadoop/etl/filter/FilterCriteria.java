@@ -1,6 +1,8 @@
 package org.openflamingo.hadoop.etl.filter;
 
+import org.openflamingo.hadoop.etl.ETLHouse;
 import org.openflamingo.hadoop.etl.utils.Row;
+import org.openflamingo.hadoop.util.StringUtils;
 
 import java.util.ArrayList;
 
@@ -27,25 +29,29 @@ public class FilterCriteria {
 	}
 
 	public String parseFilterCommand(String filterCommand, String delimeter){
-		String[] filterCommands = Row.parseByDelimeter(filterCommand, delimeter);
+		String[] filterCommands = StringUtils.delimitedListToStringArray(filterCommand, delimeter);
 		for (String filter : filterCommands) {
 			String[] commands = Row.parseByDelimeter(filter, Row.COMMAND_DELIMETER);
 
 			String commandName = commands[0];
-			int columnIndex = Integer.valueOf(commands[1]);
-			String terms = "";
+			FilterModel filterModel = buildFilterModel(commands);
 
-			if(commands.length > 2)
-				terms = commands[2];
-
-			FilterModel filterModel = new FilterModel();
-			filterModel.setColumnIndex(columnIndex);
-			filterModel.setTerms(terms);
-
-			addFilter(FilterHouse.buildFilter(commandName, filterModel));
+			addFilter(ETLHouse.buildFilter(commandName, filterModel));
 		}
 
 		return null;
+	}
+
+	private FilterModel buildFilterModel(String[] commands){
+		int columnIndex = Integer.valueOf(commands[1]);
+		String terms = "";
+		if(commands.length > 2)
+			terms = commands[2];
+
+		FilterModel filterModel = new FilterModel();
+		filterModel.setColumnIndex(columnIndex);
+		filterModel.setTerms(terms);
+		return filterModel;
 	}
 	public FilterCriteria doFilter(String row) throws InterruptedException {
 		setCoulmns(row);
@@ -92,14 +98,5 @@ public class FilterCriteria {
 			throw new InterruptedException("row contains no data");
 		return row.split(delimeter);
 	}
-
-//	private FilterCriteria filter(Filter filter) throws InterruptedException {
-//		if(filter == null)
-//			return this;
-//		if(coulmns == null || coulmns.length == 0)
-//			return this;
-//		this.coulmns = filter.service(coulmns);
-//		return this;
-//	}
 
 }

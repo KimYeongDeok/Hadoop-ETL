@@ -39,11 +39,7 @@ public class ReplaceMapper extends Mapper<LongWritable, Text, NullWritable, Text
 		String[] columns = Row.parseByDelimeter(value.toString(), delimeter);
 		replaceCriteria.doReplace(columns);
 
-		System.out.println(Arrays.toString(columns));
-
 		String result = Row.arrayToString(columns, delimeter);
-
-		System.out.println(result);
 
 		context.write(NullWritable.get(), new Text(result));
 	}

@@ -28,7 +28,7 @@ public class FilterMapper extends Mapper<LongWritable, Text, NullWritable, Text>
 		String filter = configuration.get("filter");
 
 		criteria = new FilterCriteria();
-		criteria.parseFilterCommand(filter, delimeter);
+		criteria.parseFilterCommand(filter, ",");
 
 		super.setup(context);
 	}

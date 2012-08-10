@@ -8,6 +8,7 @@ package org.openflamingo.hadoop.etl.utils;
  */
 public class Row {
 	public static final String COMMAND_DELIMETER = "::";
+
 	public static String[] parseByDelimeter(String row, String delimeter){
 		String[] columns = row.split(delimeter);
 		return columns;

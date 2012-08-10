@@ -14,7 +14,7 @@ import java.util.List;
 public class ReplaceCriteria {
 	private List<Replace> replaces;
 
-	public void parseReplaceCommand(String replaceCommand, String delimiter){
+	public void parseReplaceCommand(String replaceCommand, String delimiter) throws InterruptedException {
 		String[] columns = Row.parseByDelimeter(replaceCommand, delimiter);
 		for (String column : columns) {
 			String[] command = Row.parseByDelimeter(column, Row.COMMAND_DELIMETER);

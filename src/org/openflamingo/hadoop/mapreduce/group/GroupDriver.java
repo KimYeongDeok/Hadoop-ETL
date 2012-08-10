@@ -1,8 +1,7 @@
-package org.openflamingo.hadoop.mapreduce.filter;
+package org.openflamingo.hadoop.mapreduce.group;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
@@ -15,23 +14,27 @@ import org.openflamingo.hadoop.mapreduce.ETLDriver;
  * @author Youngdeok Kim
  * @since 1.0
  */
-public class FilterDriver implements ETLDriver{
+public class GroupDriver implements ETLDriver{
 	@Override
 	public int service(Job job, CommandLine cmd, Configuration conf) throws Exception {
 		// Mapper Class
-		job.setMapperClass(FilterMapper.class);
+		job.setMapperClass(GroupMapper.class);
+		job.setCombinerClass(GroupCombiner.class);
+		job.setReducerClass(GroupReducer.class);
+//		job.setPartitionerClass(GroupPartitioner.class);
 
 		// Output Key/Value
-		job.setMapOutputKeyClass(NullWritable.class);
-		job.setMapOutputValueClass(Text.class);
-
 		job.setInputFormatClass(TextInputFormat.class);
 		job.setOutputFormatClass(TextOutputFormat.class);
 
-		job.getConfiguration().set("filter", cmd.getOptionValue("filter"));
+		job.setMapOutputKeyClass(Text.class);
+		job.setMapOutputValueClass(Text.class);
+
+		job.getConfiguration().set("group", cmd.getOptionValue("group"));
 		job.getConfiguration().set("delimiter", cmd.getOptionValue("delimiter"));
 
-		job.setNumReduceTasks(0);
+		//Reducer Task
+		job.setNumReduceTasks(2);
 		return 0;
 	}
 }
