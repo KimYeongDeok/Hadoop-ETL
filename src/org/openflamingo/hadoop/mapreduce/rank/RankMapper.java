@@ -22,7 +22,7 @@ public class RankMapper extends Mapper<LongWritable, Text, NullWritable, Text> {
 	protected void setup(Context context) throws IOException, InterruptedException {
 		Configuration configuration = context.getConfiguration();
 		delimiter = configuration.get("delimiter");
-		String group = configuration.get("generate");
+		String group = configuration.get("rank");
 		String simpleName = context.getTaskAttemptID().toString().split("_m_")[1];
 
 		startKeyPosition = configuration.getLong(simpleName, 0);

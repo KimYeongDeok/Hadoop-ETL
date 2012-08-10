@@ -40,7 +40,7 @@ public class RankDriver implements ETLDriver{
 
 		// Mapper Classs
 		job.setMapperClass(RankMapper.class);
-
+		job.setReducerClass(RankReducer.class);
 		// Output Key/Value
 		job.setInputFormatClass(TextInputFormat.class);
 		job.setOutputFormatClass(TextOutputFormat.class);
@@ -48,11 +48,11 @@ public class RankDriver implements ETLDriver{
 		job.setMapOutputKeyClass(NullWritable.class);
 		job.setMapOutputValueClass(Text.class);
 
-		job.getConfiguration().set("generate", cmd.getOptionValue("generate"));
+//		job.getConfiguration().set("rank", cmd.getOptionValue("rank"));
 		job.getConfiguration().set("delimiter", cmd.getOptionValue("delimiter"));
 
 		//Reducer Task
-		job.setNumReduceTasks(0);
+		job.setNumReduceTasks(6);
 		return 0;
 	}
 
