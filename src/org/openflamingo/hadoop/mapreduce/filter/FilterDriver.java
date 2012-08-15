@@ -15,7 +15,7 @@ import org.openflamingo.hadoop.mapreduce.ETLDriver;
  * @author Youngdeok Kim
  * @since 1.0
  */
-public class FilterDriver implements ETLDriver{
+public class FilterDriver implements ETLDriver {
 	@Override
 	public int service(Job job, CommandLine cmd, Configuration conf) throws Exception {
 		// Mapper Class
@@ -28,7 +28,7 @@ public class FilterDriver implements ETLDriver{
 		job.setInputFormatClass(TextInputFormat.class);
 		job.setOutputFormatClass(TextOutputFormat.class);
 
-		job.getConfiguration().set("filter", cmd.getOptionValue("filter"));
+		job.getConfiguration().set("filter", cmd.getOptionValue("parameter"));
 		job.getConfiguration().set("delimiter", cmd.getOptionValue("delimiter"));
 
 		job.setNumReduceTasks(0);

@@ -1,6 +1,6 @@
 package org.openflamingo.hadoop.etl.replace;
 
-import org.openflamingo.hadoop.etl.utils.Row;
+import org.openflamingo.hadoop.etl.utils.RowUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +15,9 @@ public class ReplaceCriteria {
 	private List<Replace> replaces;
 
 	public void parseReplaceCommand(String replaceCommand, String delimiter) throws InterruptedException {
-		String[] columns = Row.parseByDelimeter(replaceCommand, delimiter);
+		String[] columns = RowUtils.parseByDelimeter(replaceCommand, delimiter);
 		for (String column : columns) {
-			String[] command = Row.parseByDelimeter(column, Row.COMMAND_DELIMETER);
+			String[] command = RowUtils.parseByDelimeter(column, RowUtils.COMMAND_DELIMETER);
 			addReplace(new Replace(command));
 		}
 	}

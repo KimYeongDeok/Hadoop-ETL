@@ -6,7 +6,7 @@ package org.openflamingo.hadoop.etl.utils;
  * @author Youngdeok Kim
  * @since 1.0
  */
-public class Row {
+public class RowUtils {
 	public static final String COMMAND_DELIMETER = "::";
 
 	public static String[] parseByDelimeter(String row, String delimeter){

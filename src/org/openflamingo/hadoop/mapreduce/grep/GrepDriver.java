@@ -15,10 +15,11 @@ import org.openflamingo.hadoop.mapreduce.ETLDriver;
  * @author Youngdeok Kim
  * @since 1.0
  */
-public class GrepDriver implements ETLDriver{
+public class GrepDriver implements ETLDriver {
+
 	@Override
-	public int service(Job job, CommandLine cmd, Configuration conf) throws Exception {
-				// Mapper Class
+	public int service(Job job,CommandLine cmd, Configuration conf) throws Exception {
+		// Mapper Class
 		job.setMapperClass(GrepMapper.class);
 
 		// Output Key/Value
@@ -26,10 +27,10 @@ public class GrepDriver implements ETLDriver{
 		job.setMapOutputValueClass(Text.class);
 
 		job.setInputFormatClass(TextInputFormat.class);
-        job.setOutputFormatClass(TextOutputFormat.class);
+		job.setOutputFormatClass(TextOutputFormat.class);
 
-		job.getConfiguration().set("grep", cmd.getOptionValue("grep"));
-		job.getConfiguration().set("delimeter", cmd.getOptionValue("delimeter"));
+		job.getConfiguration().set("grep", cmd.getOptionValue("parameter"));
+		//job.getConfiguration().set("delimiter", cmd.getOptionValue("delimiter"));
 
 		// Reducer Task
 		job.setNumReduceTasks(0);

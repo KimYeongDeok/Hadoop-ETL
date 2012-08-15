@@ -1,7 +1,7 @@
 package org.openflamingo.hadoop.etl.filter;
 
-import org.openflamingo.hadoop.etl.ETLHouse;
-import org.openflamingo.hadoop.etl.utils.Row;
+import org.openflamingo.hadoop.etl.ETLObjectHouse;
+import org.openflamingo.hadoop.etl.utils.RowUtils;
 import org.openflamingo.hadoop.util.StringUtils;
 
 import java.util.ArrayList;
@@ -14,35 +14,30 @@ import java.util.ArrayList;
  */
 public class FilterCriteria {
 	private String delimeter = ",";
-	private String[] coulmns;
+	private String[] columns;
 	private ArrayList<Filter> filters;
 
-	public FilterCriteria() {
+	public FilterCriteria(String filterCommand, String delimeter) {
+		parseFilterCommand(filterCommand, delimeter);
 	}
 
-	public FilterCriteria(String row) throws InterruptedException {
-		this.coulmns = devideByDelimeter(row);
-	}
-	public FilterCriteria(String row, String delimeter) throws InterruptedException {
-		this.delimeter = delimeter;
-		this.coulmns = devideByDelimeter(row);
-	}
-
-	public String parseFilterCommand(String filterCommand, String delimeter){
+	private String parseFilterCommand(String filterCommand, String delimeter){
 		String[] filterCommands = StringUtils.delimitedListToStringArray(filterCommand, delimeter);
 		for (String filter : filterCommands) {
-			String[] commands = Row.parseByDelimeter(filter, Row.COMMAND_DELIMETER);
+			String[] commands = RowUtils.parseByDelimeter(filter, RowUtils.COMMAND_DELIMETER);
 
 			String commandName = commands[0];
-			FilterModel filterModel = buildFilterModel(commands);
+			FilterModel filterModel = createFilterModel(commands);
 
-			addFilter(ETLHouse.buildFilter(commandName, filterModel));
+			FilterClass filterClass = (FilterClass) ETLObjectHouse.findClassByName(commandName);
+			filterClass.setFilterModel(filterModel);
+			addFilter(filterClass);
 		}
 
 		return null;
 	}
 
-	private FilterModel buildFilterModel(String[] commands){
+	private FilterModel createFilterModel(String[] commands){
 		int columnIndex = Integer.valueOf(commands[1]);
 		String terms = "";
 		if(commands.length > 2)
@@ -53,19 +48,24 @@ public class FilterCriteria {
 		filterModel.setTerms(terms);
 		return filterModel;
 	}
-	public FilterCriteria doFilter(String row) throws InterruptedException {
-		setCoulmns(row);
+	public FilterCriteria doFilter(String[] columns) throws InterruptedException {
+		this.columns = columns;
 
 		if(filters == null || filters.size() == 0)
 			return this;
 
 		for (Filter filter : filters) {
-			if(filter.service(coulmns))
-				return this;
+			if(filter.service(this.columns))
+				return passFilter();
 		}
-		coulmns = null;
+		this.columns = null;
 		return this;
 	}
+
+	private FilterCriteria passFilter() {
+		return this;
+	}
+
 	public void addFilter(Filter filter){
 		if(filters == null)
 			filters = new ArrayList<Filter>();
@@ -73,22 +73,14 @@ public class FilterCriteria {
 	}
 
 	public String getRow(){
-		if(coulmns == null || coulmns.length == 0)
+		if(columns == null || columns.length == 0)
 			return null;
 		StringBuilder stringBuilder = new StringBuilder();
-		for (String coulmn : coulmns) {
+		for (String coulmn : columns) {
 			stringBuilder.append(coulmn).append(delimeter);
 		}
 		stringBuilder.delete(stringBuilder.length()-1, stringBuilder.length());
 		return stringBuilder.toString();
-	}
-
-	public void setCoulmns(String row) throws InterruptedException {
-		this.coulmns = devideByDelimeter(row);
-	}
-
-	public boolean isRow(){
-		return !(coulmns == null || coulmns.length == 0);
 	}
 
 	private String[] devideByDelimeter(String row) throws InterruptedException {
@@ -99,4 +91,7 @@ public class FilterCriteria {
 		return row.split(delimeter);
 	}
 
+	public boolean isRow() {
+		return columns != null;
+	}
 }

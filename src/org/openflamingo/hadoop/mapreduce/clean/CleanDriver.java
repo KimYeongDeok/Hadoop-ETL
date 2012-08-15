@@ -17,8 +17,9 @@ import org.openflamingo.hadoop.mapreduce.ETLDriver;
  * @since 1.0
  */
 public class CleanDriver implements ETLDriver{
+
 	@Override
-	public int service(Job job, CommandLine cmd, Configuration conf) throws Exception {
+	public int service(Job job,CommandLine cmd, Configuration conf) throws Exception {
 		// Mapper Class
 		job.setMapperClass(CleanMapper.class);
 
@@ -29,7 +30,7 @@ public class CleanDriver implements ETLDriver{
 		job.setInputFormatClass(TextInputFormat.class);
 		job.setOutputFormatClass(TextOutputFormat.class);
 
-		job.getConfiguration().set("clean",cmd.getOptionValue("clean"));
+		job.getConfiguration().set("clean", cmd.getOptionValue("parameter"));
 		job.getConfiguration().set("delimiter",cmd.getOptionValue("delimiter"));
 
 		job.setNumReduceTasks(0);

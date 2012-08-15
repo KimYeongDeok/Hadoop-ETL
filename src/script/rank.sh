@@ -5,8 +5,8 @@ INPUT="youngdeok/etl_rank_data/"
 OUTPUT="youngdeok/etl_rank/output"
 MAPREDUCE="FrontDriver"
 DELIMITER=","
-COMMAND="-rank 1231"
+COMMAND="rank"
 
 ssh $UCLOUD hadoop fs -rmr $OUTPUT
-ssh $UCLOUD hadoop jar /root/youngdeok/hadoop-example.jar org.openflamingo.hadoop.mapreduce.$MAPREDUCE -input $INPUT -output $OUTPUT -delimiter $DELIMITER $COMMAND
+ssh $UCLOUD hadoop jar /root/youngdeok/hadoop-example.jar org.openflamingo.hadoop.mapreduce.$MAPREDUCE -input $INPUT -output $OUTPUT -delimiter $DELIMITER -command $COMMAND
 ssh $UCLOUD hadoop fs -cat $OUTPUT/part-*

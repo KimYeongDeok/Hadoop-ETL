@@ -8,8 +8,10 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.openflamingo.hadoop.etl.filter.FilterCriteria;
 import org.openflamingo.hadoop.etl.filter.filters.Equals;
 import org.openflamingo.hadoop.etl.filter.filters.NotEmpty;
+import org.openflamingo.hadoop.util.StringUtils;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 /**
  * Description.
@@ -24,18 +26,19 @@ public class FilterMapper extends Mapper<LongWritable, Text, NullWritable, Text>
 	@Override
 	protected void setup(Context context) throws IOException, InterruptedException {
 		Configuration configuration = context.getConfiguration();
-		delimeter = configuration.get("delimeter");
+		delimeter = configuration.get("delimiter");
 		String filter = configuration.get("filter");
 
-		criteria = new FilterCriteria();
-		criteria.parseFilterCommand(filter, ",");
+		criteria = new FilterCriteria(filter, delimeter);
 
 		super.setup(context);
 	}
 
 	@Override
 	protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-		criteria.doFilter(value.toString());
+		String[] columns = StringUtils.delimitedListToStringArray(value.toString(), ",");
+
+		criteria.doFilter(columns);
 
 		if(criteria.isRow())
 			context.write(NullWritable.get(), new Text(criteria.getRow()));

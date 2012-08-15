@@ -22,7 +22,7 @@ public class GenerateCountMapper extends Mapper<LongWritable, Text, NullWritable
 
 	@Override
 	protected void setup(Context context) throws IOException, InterruptedException {
-		taskID = context.getTaskAttemptID().toString();
+		taskID = String.valueOf(context.getTaskAttemptID().getTaskID().getId());
 	}
 
 	@Override

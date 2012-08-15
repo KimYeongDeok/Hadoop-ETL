@@ -13,7 +13,7 @@ import java.util.Arrays;
 public class ParserTest {
 	@Test
 	public void adsfs() throws Exception {
-		String[] args = {"-input","asdf","-input","sdf","-output","eee","-delimiter",","};
+		String[] args = {"-input","asdf","sdf","-output","eee","-delimiter",","};
 
 		CommandLine cmd = new CommandInspector().parseCommandLine(args);
 

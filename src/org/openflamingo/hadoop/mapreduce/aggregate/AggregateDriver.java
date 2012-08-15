@@ -17,8 +17,8 @@ import org.openflamingo.hadoop.mapreduce.ETLDriver;
  */
 public class AggregateDriver implements ETLDriver {
 	@Override
-	public int service(Job job, CommandLine cmd, Configuration conf) throws Exception {
-		// Mapper Class
+	public int service(Job job,CommandLine cmd, Configuration conf) throws Exception {
+	    // Mapper Class
 		job.setMapperClass(AggregateMapper.class);
 
 		// Output Key/Value

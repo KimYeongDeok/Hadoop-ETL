@@ -19,13 +19,13 @@ import org.openflamingo.hadoop.etl.filter.FilterModel;
  */
 @RunWith(MockitoJUnitRunner.class)
 public class NotEqualsTest {
-	private FilterClass notEmpty;
+	private FilterClass notEquals;
 	@Mock
 	private FilterModel filterModel;
 
 	@Before
 	public void setUp() throws Exception {
-		notEmpty = new NotEmpty();
+		notEquals = new NotEquals();
 	}
 
 	@Test
@@ -33,7 +33,7 @@ public class NotEqualsTest {
 		when(filterModel.getColumnIndex()).thenReturn(0);
 		when(filterModel.getTerms()).thenReturn("testData");
 
-		boolean success = notEmpty.doFilter("data",filterModel);
+		boolean success = notEquals.doFilter("data",filterModel);
 
 		assertThat(success, is(true));
 	}
@@ -42,7 +42,7 @@ public class NotEqualsTest {
 		when(filterModel.getColumnIndex()).thenReturn(0);
 		when(filterModel.getTerms()).thenReturn("data");
 
-		boolean success = notEmpty.doFilter("data", filterModel);
+		boolean success = notEquals.doFilter("data", filterModel);
 
 		assertThat(success, is(false));
 	}

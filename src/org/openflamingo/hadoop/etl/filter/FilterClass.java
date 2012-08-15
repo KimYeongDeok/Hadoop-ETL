@@ -13,7 +13,7 @@ public abstract class FilterClass implements Filter{
 		boolean success = false;
 
 		if(coulmns.length <= filterModel.getColumnIndex())
-			throw new InterruptedException("Out of CoulmnIndex");
+			throw new InterruptedException("Out of CoulmnIndex" + coulmns.length);
 
 		if(filterModel.getColumnIndex() < 0)
 			success = doFilterInAllCoulmns(coulmns);

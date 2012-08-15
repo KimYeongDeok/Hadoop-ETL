@@ -14,6 +14,8 @@ import org.openflamingo.hadoop.etl.generate.GenerateCountMapper;
 import org.openflamingo.hadoop.mapreduce.ETLDriver;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Description.
@@ -21,12 +23,22 @@ import java.io.IOException;
  * @author Youngdeok Kim
  * @since 1.0
  */
-public class GenerateDriver implements ETLDriver{
+public class GenerateDriver implements ETLDriver {
+
 	@Override
 	public int service(Job job, CommandLine cmd, Configuration conf) throws Exception {
-		CounterGroup counters = countJobMapper(cmd, conf);
+		String generate = cmd.getOptionValue("parameter");
 
-		settingCounterToMapper(job, counters);
+		if ("sequence".equals(generate)) {
+			CounterGroup counters = countJobMapper(cmd, conf);
+			settingCounterToMapper(job, counters);
+		}
+		if ("date".equals(generate)) {
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-mm-dd");
+			Date date = new Date();
+			String formatDate = simpleDateFormat.format(date);
+			job.getConfiguration().set("date", formatDate);
+		}
 
 		// Mapper Classs
 		job.setMapperClass(GenerateMapper.class);
@@ -38,7 +50,7 @@ public class GenerateDriver implements ETLDriver{
 		job.setMapOutputKeyClass(NullWritable.class);
 		job.setMapOutputValueClass(Text.class);
 
-		job.getConfiguration().set("generate", cmd.getOptionValue("generate"));
+		job.getConfiguration().set("generate", generate);
 		job.getConfiguration().set("delimiter", cmd.getOptionValue("delimiter"));
 
 		//Reducer Task
@@ -48,16 +60,16 @@ public class GenerateDriver implements ETLDriver{
 
 	private CounterGroup countJobMapper(CommandLine cmd, Configuration conf) throws IOException, InterruptedException, ClassNotFoundException {
 		ProcessJob processJob = new ProcessJob(cmd, conf).invoke(GenerateCountMapper.class);
-		if (processJob.is())
+		if (!processJob.is())
 			throw new InterruptedException("Counter Job runs failed.");
 		return processJob.getCounterGroup();
 	}
+
 	private void settingCounterToMapper(Job job, CounterGroup counters) {
-			long key = 0;
-			for (Counter counter : counters) {
-				String simpleName = counter.getName().split("_m_")[1];
-				job.getConfiguration().setLong(simpleName, key);
-				key += counter.getValue();
-			}
+		long key = 0;
+		for (Counter counter : counters) {
+			job.getConfiguration().setLong(counter.getName(), key);
+			key += counter.getValue();
+		}
 	}
 }

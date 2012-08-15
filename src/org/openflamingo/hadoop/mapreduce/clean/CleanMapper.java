@@ -5,7 +5,6 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
-import org.openflamingo.hadoop.util.StringUtils;
 
 import java.io.IOException;
 
@@ -25,7 +24,7 @@ public class CleanMapper extends Mapper<LongWritable, Text, NullWritable, Text> 
 		String command = configuration.get("clean");
 		delimeter = configuration.get("delimiter");
 
-		clean = CleanBuild.build(command, delimeter);
+		clean = CleanFactory.create(command, delimeter);
 	}
 
 	@Override

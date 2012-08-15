@@ -6,10 +6,9 @@ import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.openflamingo.hadoop.etl.replace.ReplaceCriteria;
-import org.openflamingo.hadoop.etl.utils.Row;
+import org.openflamingo.hadoop.etl.utils.RowUtils;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 /**
  * Description.
@@ -25,7 +24,7 @@ public class ReplaceMapper extends Mapper<LongWritable, Text, NullWritable, Text
 	@Override
 	protected void setup(Context context) throws IOException, InterruptedException {
 		Configuration configuration = context.getConfiguration();
-		delimeter = configuration.get("delimeter");
+		delimeter = configuration.get("delimiter");
 		String replace = configuration.get("replace");
 
 		replaceCriteria = new ReplaceCriteria();
@@ -36,10 +35,10 @@ public class ReplaceMapper extends Mapper<LongWritable, Text, NullWritable, Text
 
 	@Override
 	protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-		String[] columns = Row.parseByDelimeter(value.toString(), delimeter);
+		String[] columns = RowUtils.parseByDelimeter(value.toString(), delimeter);
 		replaceCriteria.doReplace(columns);
 
-		String result = Row.arrayToString(columns, delimeter);
+		String result = RowUtils.arrayToString(columns, delimeter);
 
 		context.write(NullWritable.get(), new Text(result));
 	}

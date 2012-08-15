@@ -18,6 +18,7 @@ import org.openflamingo.hadoop.mapreduce.ETLDriver;
 public class ReplaceDriver implements ETLDriver {
 	@Override
 	public int service(Job job, CommandLine cmd, Configuration conf) throws Exception {
+
 		// Mapper Class
 		job.setMapperClass(ReplaceMapper.class);
 
@@ -28,8 +29,8 @@ public class ReplaceDriver implements ETLDriver {
 		job.setInputFormatClass(TextInputFormat.class);
 		job.setOutputFormatClass(TextOutputFormat.class);
 
-		job.getConfiguration().set("replace", cmd.getOptionValue("replace"));
-		job.getConfiguration().set("delimeter", ",");
+		job.getConfiguration().set("replace", cmd.getOptionValue("parameter"));
+		job.getConfiguration().set("delimiter", ",");
 
 		// Reducer Task
 		job.setNumReduceTasks(0);

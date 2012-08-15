@@ -23,6 +23,7 @@ import java.io.IOException;
  * @since 1.0
  */
 public class RankDriver implements ETLDriver{
+
 	@Override
 	public int service(Job job, CommandLine cmd, Configuration conf) throws Exception {
 		CounterGroup counters = countJobMapper(cmd, conf);
@@ -38,25 +39,24 @@ public class RankDriver implements ETLDriver{
 		job.setMapOutputKeyClass(NullWritable.class);
 		job.setMapOutputValueClass(Text.class);
 
-//		job.getConfiguration().set("rank", cmd.getOptionValue("rank"));
+		//		job.getConfiguration().set("rank", cmd.getOptionValue("rank"));
 		job.getConfiguration().set("delimiter", cmd.getOptionValue("delimiter"));
 
 		//Reducer Task
 		job.setNumReduceTasks(6);
 		return 0;
 	}
-
 	private CounterGroup countJobMapper(CommandLine cmd, Configuration conf) throws IOException, InterruptedException, ClassNotFoundException {
 		ProcessJob processJob = new ProcessJob(cmd, conf).invoke(GenerateCountMapper.class);
-		if (processJob.is())
+		if (!processJob.is())
 			throw new InterruptedException("Counter Job runs failed.");
 		return processJob.getCounterGroup();
 	}
+
 	private void settingCounterToMapper(Job job, CounterGroup counters) {
 		long key = 0;
 		for (Counter counter : counters) {
-			String simpleName = counter.getName().split("_m_")[1];
-			job.getConfiguration().setLong(simpleName, key);
+			job.getConfiguration().setLong(counter.getName(), key);
 			key += counter.getValue();
 		}
 

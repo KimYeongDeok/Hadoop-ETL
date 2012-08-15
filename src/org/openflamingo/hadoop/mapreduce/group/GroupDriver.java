@@ -14,7 +14,7 @@ import org.openflamingo.hadoop.mapreduce.ETLDriver;
  * @author Youngdeok Kim
  * @since 1.0
  */
-public class GroupDriver implements ETLDriver{
+public class GroupDriver implements ETLDriver {
 	@Override
 	public int service(Job job, CommandLine cmd, Configuration conf) throws Exception {
 		// Mapper Class
@@ -30,7 +30,7 @@ public class GroupDriver implements ETLDriver{
 		job.setMapOutputKeyClass(Text.class);
 		job.setMapOutputValueClass(Text.class);
 
-		job.getConfiguration().set("group", cmd.getOptionValue("group"));
+		job.getConfiguration().set("group", cmd.getOptionValue("parameter"));
 		job.getConfiguration().set("delimiter", cmd.getOptionValue("delimiter"));
 
 		//Reducer Task

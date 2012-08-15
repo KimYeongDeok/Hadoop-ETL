@@ -5,38 +5,52 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
+import org.openflamingo.hadoop.etl.generate.Generate;
+import org.openflamingo.hadoop.etl.generate.GenerateSequence;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Description.
  *
- * @author Youngdeok Kimou
+ * @author Youngdeok Kim
  * @since 1.0
  */
 public class GenerateMapper extends Mapper<LongWritable, Text, NullWritable, Text> {
 	private String delimiter;
 	private long startKeyPosition;
+	private String generate;
+	private String date;
+	private String simpleName;
+	private String t;
 
 	@Override
 	protected void setup(Context context) throws IOException, InterruptedException {
 		Configuration configuration = context.getConfiguration();
 		delimiter = configuration.get("delimiter");
-		String group = configuration.get("generate");
-		String simpleName = context.getTaskAttemptID().toString().split("_m_")[1];
+		generate = configuration.get("generate");
+		date = configuration.get("date");
 
+		String simpleName = String.valueOf(context.getTaskAttemptID().getTaskID().getId());
 		startKeyPosition = configuration.getLong(simpleName, 0);
 
 		super.setup(context);
 	}
+
 
 	@Override
 	protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
 		StringBuilder builder = new StringBuilder();
 
 		builder.append(value.toString())
-			   .append(delimiter)
-			   .append(startKeyPosition++);
+			   .append(delimiter);
+
+		if(generate.equals("sequence"))
+			builder.append(startKeyPosition++);
+		else
+			builder.append(date);
 
 		context.write(NullWritable.get(), new Text(builder.toString()));
 	}
