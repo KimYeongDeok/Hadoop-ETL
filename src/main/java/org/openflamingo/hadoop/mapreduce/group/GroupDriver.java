@@ -21,7 +21,6 @@ public class GroupDriver implements ETLDriver {
 		job.setMapperClass(GroupMapper.class);
 		job.setCombinerClass(GroupCombiner.class);
 		job.setReducerClass(GroupReducer.class);
-//		job.setPartitionerClass(GroupPartitioner.class);
 
 		// Output Key/Value
 		job.setInputFormatClass(TextInputFormat.class);
