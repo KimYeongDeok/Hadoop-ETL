@@ -1,7 +1,8 @@
-package org.openflamingo.hadoop.mapreduce.clean;
+package org.openflamingo.hadoop.clean;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.openflamingo.hadoop.mapreduce.clean.Clean;
 
 /**
  * Description.

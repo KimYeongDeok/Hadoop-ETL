@@ -1,4 +1,4 @@
-package org.openflamingo.hadoop.mapreduce.clean;
+package org.openflamingo.hadoop.clean;
 
 /**
  * Description.
