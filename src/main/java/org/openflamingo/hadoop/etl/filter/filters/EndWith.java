@@ -4,7 +4,7 @@ import org.openflamingo.hadoop.etl.filter.FilterClass;
 import org.openflamingo.hadoop.etl.filter.FilterModel;
 
 /**
- * Description.
+ * 이 클래스는 컬럼의 정보중 마지막 부분과 같은 정보인지 검사한다.
  *
  * @author Youngdeok Kim
  * @since 1.0

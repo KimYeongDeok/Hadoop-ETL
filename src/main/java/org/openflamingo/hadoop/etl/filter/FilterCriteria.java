@@ -68,7 +68,7 @@ public class FilterCriteria {
 	 * Filter를 수행한다. {@code filters}에 저장된 Filter들을 순차적으로 진행하여
 	 * 검사한다. 만약 모든 Filter를 통과하면 {@link FilterCriteria}를 반환하고 Filter를
 	 * 통과하지 못하면 null를 반환한다.
-	 * @param columns {@code Mapper}에서 입력받은 값을 분석한 데이터들
+	 * @param columns {@code Mapper}에서 입력받은 값을 분석한 데이터들의 배열
 	 * @return {@link FilterCriteria}
 	 * @throws InterruptedException
 	 */
