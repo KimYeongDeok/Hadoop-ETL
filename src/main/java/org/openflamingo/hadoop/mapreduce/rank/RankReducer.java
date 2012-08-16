@@ -5,6 +5,7 @@ import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 
 import java.io.IOException;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.NavigableSet;
 import java.util.TreeMap;
@@ -28,16 +29,16 @@ public class RankReducer extends org.apache.hadoop.mapreduce.Reducer<NullWritabl
 	@Override
 	protected void reduce(NullWritable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
 		TreeMap<String, String> uniqueKeyMap = generateUniqueKeyMap(values);
-		NavigableSet<String> sequenceKeySet = uniqueKeyMap.navigableKeySet();
+		Collection<String> columns = uniqueKeyMap.values();
 
 		int rank = 1;
 
-		assert sequenceKeySet.iterator().hasNext();
-		String previousPrimaryCoulmn = getFirstPrimaryCoulmn(uniqueKeyMap, sequenceKeySet);
+		assert columns.iterator().hasNext();
+		String previousPrimaryCoulmn = columns.iterator().next();
 
-		Iterator<String> iterator = sequenceKeySet.iterator();
+		Iterator<String> iterator = columns.iterator();
 		while (iterator.hasNext()) {
-			String row = getRow(uniqueKeyMap, iterator);
+			String row = iterator.next();
 			String primaryColumn = getPrimaryCoulumn(row);
 
 			StringBuilder builder = new StringBuilder(row);
@@ -52,17 +53,8 @@ public class RankReducer extends org.apache.hadoop.mapreduce.Reducer<NullWritabl
 		}
 	}
 
-	private String getFirstPrimaryCoulmn(TreeMap<String, String> uniqueKeyMap, NavigableSet<String> sequenceKeySet) {
-		return uniqueKeyMap.get(sequenceKeySet.iterator().next());
-	}
-
-	private String getRow(TreeMap<String, String> uniqueKeyMap, Iterator<String> iterator) {
-		String sequenceKey =  iterator.next();
-		return uniqueKeyMap.get(sequenceKey);
-	}
-
 	private String getPrimaryCoulumn(String row) {
-		int firstCommaIndex = row.indexOf(",");
+		int firstCommaIndex = row.indexOf(delimiter);
 		return row.substring(0, firstCommaIndex);
 	}
 
@@ -71,17 +63,11 @@ public class RankReducer extends org.apache.hadoop.mapreduce.Reducer<NullWritabl
 		Iterator<Text> interator = values.iterator();
 		while (interator.hasNext()) {
 			String row =  interator.next().toString();
-			int lastCommaIndex = row.lastIndexOf(",");
+			int lastCommaIndex = row.lastIndexOf(delimiter);
 			String coulmns = row.substring(0, lastCommaIndex);
 			String generateKey = row.substring(lastCommaIndex, row.length());
 			uniqueKeyMap.put(generateKey, coulmns);
 		}
 		return uniqueKeyMap;
 	}
-
-	@Override
-	protected void cleanup(Context context) throws IOException, InterruptedException {
-	}
-
-
 }

@@ -4,26 +4,22 @@
     <bookmark url="file://$PROJECT_DIR$/build.xml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82b9cc83-c539-4775-947c-f590b6477640" name="Default" comment="테스트 코드 위치 변경&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/clean/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/clean/UserController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/clean/UserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/etl/filter/filters/EmptyTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/etl/filter/filters/EndWithTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/etl/filter/filters/EqualsTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/etl/filter/filters/GreaterThanEqualsTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/etl/filter/filters/GreaterThanTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/etl/filter/filters/LeastThanEqualsTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/etl/filter/filters/LeastThanTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/etl/filter/filters/NotEmptyTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/etl/filter/filters/NotEqualsTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/etl/filter/filters/StartWithTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resource/ParserTest.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/clean/User.java" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/clean/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/clean/UserController.java" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/clean/UserController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/clean/UserService.java" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/clean/UserService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/mapreduce/clean/CleanTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/clean/CleanTest.java" />
+    <list default="true" id="82b9cc83-c539-4775-947c-f590b6477640" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/generate/CounterDriverUtils.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/EmptyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/EndWithTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/EqualsTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/GreaterThanEqualsTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/GreaterThanTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/LeastThanEqualsTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/LeastThanTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/NotEmptyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/NotEqualsTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/StartWithTest.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/generate/GenerateDriver.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/generate/GenerateDriver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankDriver.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankDriver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankReducer.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankReducer.java" />
     </list>
     <ignored path="hadoop-example.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -149,31 +145,78 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FilterModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/FilterModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="66" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReplaceDriver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/replace/ReplaceDriver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="45" selection-start="817" selection-end="819" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ETLObjectHouse.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ETLObjectHouse.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/ETLObjectHouse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="39" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.34900284">
+            <state line="42" column="48" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DateUtils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/DateUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="3" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AggregateDriver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/aggregate/AggregateDriver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="13" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RankDriver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankDriver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="0" selection-start="1197" selection-end="1204" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CounterDriverUtils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/generate/CounterDriverUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="5" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GenerateDriver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/generate/GenerateDriver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="44" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RankReducer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankReducer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="0" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.48987854">
+              <folding>
+                <element signature="e#1845#1860#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RankMapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="0" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -182,9 +225,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/etl/filter/filters/GreaterThanTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="12" column="62" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -193,51 +234,6 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/Empty.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="19" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EndWith.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/EndWith.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="1" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GreaterThanEquals.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/GreaterThanEquals.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="1" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LeastThan.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/LeastThan.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="33" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LeastThanEquals.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/LeastThanEquals.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="39" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Equals.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/Equals.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="1" selection-start="169" selection-end="199" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -266,12 +262,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/Filter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/FilterClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/Equals.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/GreaterThan.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/GreaterThanEquals.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/LeastThan.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/LeastThanEquals.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/Empty.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/NotEmpty.java" />
@@ -282,6 +272,12 @@
         <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filters/EndWith.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/EndWith.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/ETLObjectHouse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/generate/CounterDriverSupport.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankDriver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/generate/GenerateDriver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/generate/CounterDriverUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankReducer.java" />
       </list>
     </option>
   </component>
@@ -528,6 +524,20 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop-example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop-example" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PackageViewModuleNodeWrapper" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -589,6 +599,10 @@
               <option name="myItemId" value="hadoop" />
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="filters" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -613,10 +627,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hadoop" />
-              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clean" />
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
           </PATH>
@@ -734,22 +744,110 @@
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="mapreduce" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rank" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop-example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hadoop-ETL" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapreduce" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generate" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop-example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hadoop-ETL" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="etl" />
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="hadoop-example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hadoop-example" />
-              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PackageViewModuleNodeWrapper" />
+              <option name="myItemId" value="Hadoop-ETL" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="etl" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generate" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -758,16 +856,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="300" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="303" />
-    <property name="OverrideImplement.combined" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="300" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="303" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="300" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="310" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="933" />
@@ -781,19 +879,19 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="options.lastSelected" value="preferences.lookFeel" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -1028,24 +1126,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1072,6 +1152,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1206,7 +1304,11 @@
       <created>1345100792765</created>
       <updated>1345100792765</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="테스트 코드 위치 변경&#10;">
+      <created>1345109404791</created>
+      <updated>1345109404791</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1237,7 +1339,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23374613" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.6722338" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1245,20 +1346,21 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22954546" sideWeight="0.13777089" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.6722338" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26409185" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21816283" sideWeight="0.47878787" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21816283" sideWeight="0.47878787" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cloverage" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21482602" sideWeight="0.13622291" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20272315" sideWeight="0.78173375" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20255864" sideWeight="0.8361169" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39908952" sideWeight="0.6722338" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22867803" sideWeight="0.78183717" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16408668" sideWeight="0.48560607" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21321961" sideWeight="0.8361169" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16388309" sideWeight="0.48560607" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Test Runs" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.8359133" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="-9" y="19" width="1384" height="758" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19778346" sideWeight="0.25611746" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1366,110 +1468,92 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/FilterClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/Filter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/GreaterThan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="169" selection-end="212" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/NotEmpty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="2" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/NotEquals.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="2" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/StartWith.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/GreaterThanEquals.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/LeastThan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="33" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="33" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/LeastThanEquals.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="39" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="39" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/Equals.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="169" selection-end="199" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="1" selection-start="169" selection-end="199" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/FilterModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="66" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="35" column="66" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/replace/ReplaceDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="45" selection-start="817" selection-end="819" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="26" column="45" selection-start="817" selection-end="819" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/EndWith.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="1" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="19" column="1" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/Empty.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/ETLObjectHouse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="42" column="48" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/DateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="3" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/aggregate/AggregateDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/generate/GenerateDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="44" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/openflamingo/hadoop/etl/filter/filters/GreaterThanTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="62" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0">
+        <state line="12" column="62" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/Empty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/generate/CounterDriverUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="5" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/ETLObjectHouse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="39" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.34900284">
+        <state line="36" column="0" selection-start="1197" selection-end="1204" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.48987854">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1845#1860#0" expanded="true" />
           </folding>
         </state>
       </provider>

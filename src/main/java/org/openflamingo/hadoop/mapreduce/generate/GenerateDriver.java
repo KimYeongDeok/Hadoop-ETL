@@ -10,6 +10,7 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import org.openflamingo.hadoop.etl.ProcessJob;
+import org.openflamingo.hadoop.etl.generate.CounterDriverUtils;
 import org.openflamingo.hadoop.etl.generate.GenerateCountMapper;
 import org.openflamingo.hadoop.mapreduce.ETLDriver;
 
@@ -30,8 +31,8 @@ public class GenerateDriver implements ETLDriver {
 		String generate = cmd.getOptionValue("parameter");
 
 		if ("sequence".equals(generate)) {
-			CounterGroup counters = countJobMapper(cmd, conf);
-			settingCounterToMapper(job, counters);
+			CounterGroup counters = CounterDriverUtils.countJobMapper(cmd, conf);
+			CounterDriverUtils.settingCounterToMapper(job, counters);
 		}
 		if ("date".equals(generate)) {
 			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-mm-dd");
@@ -58,18 +59,4 @@ public class GenerateDriver implements ETLDriver {
 		return 0;
 	}
 
-	private CounterGroup countJobMapper(CommandLine cmd, Configuration conf) throws IOException, InterruptedException, ClassNotFoundException {
-		ProcessJob processJob = new ProcessJob(cmd, conf).invoke(GenerateCountMapper.class);
-		if (!processJob.is())
-			throw new InterruptedException("Counter Job runs failed.");
-		return processJob.getCounterGroup();
-	}
-
-	private void settingCounterToMapper(Job job, CounterGroup counters) {
-		long key = 0;
-		for (Counter counter : counters) {
-			job.getConfiguration().setLong(counter.getName(), key);
-			key += counter.getValue();
-		}
-	}
 }
