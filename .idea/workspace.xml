@@ -1,47 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="82b9cc83-c539-4775-947c-f590b6477640" name="Default" comment="&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/generate/Generate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/generate/GenerateDate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/generate/GenerateSequence.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/ETLHouse.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/ETLObjectHouse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/utils/Row.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/utils/RowUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/clean/CleanBuild.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/clean/CleanFactory.java" />
+    <list default="true" id="82b9cc83-c539-4775-947c-f590b6477640" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/FilterModel.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/FilterModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/generate/Generate.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/generate/GenerateDate.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/generate/GenerateSequence.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/ArrayUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/Constants.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/CounterUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/CsvRowParser.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/DateUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/Delimiter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/FileUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/HadoopMetrics.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/HdfsUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/IterableComparisonUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/MapReduceUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/MathUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/MemoryUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/NumberUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/PooledStreamCompressor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/ReflectionUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/StringUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/TextArrayWritable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/TimestampUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/UUIDUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/WritableUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/openflamingo/hadoop/util/XmlFormatter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/script/run.sh" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/ETLObjectHouse.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/ETLObjectHouse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/ProcessJob.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/ProcessJob.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/Filter.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/Filter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/FilterClass.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/FilterClass.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/FilterCriteria.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/FilterCriteria.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/filters/Empty.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/Empty.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/filters/EndWith.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/EndWith.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/filters/Equals.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/Equals.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/filters/GreaterThan.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/GreaterThan.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/filters/GreaterThanEquals.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/GreaterThanEquals.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/filters/LeastThan.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/LeastThan.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/filters/LeastThanEquals.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/LeastThanEquals.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/filters/NotEmpty.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/NotEmpty.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/filters/NotEquals.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/NotEquals.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/filters/StartWith.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/filters/StartWith.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/generate/GenerateCountMapper.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/generate/GenerateCountMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/replace/ReplaceCriteria.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/replace/ReplaceCriteria.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/utils/ArrayUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/utils/ArrayUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/utils/RowUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/utils/RowUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/CommandInspector.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/CommandInspector.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/ETLDriver.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/ETLDriver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/FrontDriver.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/FrontDriver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/aggregate/AggregateDriver.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/aggregate/AggregateDriver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/aggregate/AggregateMapper.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/aggregate/AggregateMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/clean/Clean.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/clean/Clean.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/clean/CleanDriver.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/clean/CleanDriver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/clean/CleanFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/clean/CleanFactory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/clean/CleanMapper.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/clean/CleanMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/clean/User.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/clean/User.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/clean/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/clean/UserController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/clean/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/clean/UserService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/filter/FilterDriver.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/filter/FilterDriver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/filter/FilterMapper.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/filter/FilterMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/generate/GenerateDriver.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/generate/GenerateDriver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/generate/GenerateMapper.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/generate/GenerateMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/grep/GrepDriver.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/grep/GrepDriver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/grep/GrepMapper.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/grep/GrepMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/group/GroupCombiner.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/group/GroupCombiner.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/group/GroupDriver.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/group/GroupDriver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/group/GroupMapper.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/group/GroupMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/group/GroupPartitioner.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/group/GroupPartitioner.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/group/GroupReducer.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/group/GroupReducer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/rank/RankDriver.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankDriver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/rank/RankMapper.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/rank/RankReducer.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/rank/RankReducer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/replace/ReplaceDriver.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/replace/ReplaceDriver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/replace/ReplaceMapper.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/replace/ReplaceMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/ArrayUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/ArrayUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/Constants.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/CounterUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/CounterUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/CsvRowParser.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/CsvRowParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/DateUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/DateUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/Delimiter.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/Delimiter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/FileUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/FileUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/HadoopMetrics.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/HadoopMetrics.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/HdfsUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/HdfsUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/IterableComparisonUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/IterableComparisonUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/MapReduceUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/MapReduceUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/MathUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/MathUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/MemoryUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/MemoryUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/NumberUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/NumberUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/PooledStreamCompressor.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/PooledStreamCompressor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/ReflectionUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/ReflectionUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/StringUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/StringUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/TextArrayWritable.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/TextArrayWritable.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/TimestampUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/TimestampUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/UUIDUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/UUIDUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/WritableUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/WritableUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/util/XmlFormatter.java" afterPath="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/XmlFormatter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/ParserTest.java" afterPath="$PROJECT_DIR$/src/test/resource/ParserTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/org/openflamingo/hadoop/etl/filter/filters/EmptyTest.java" afterPath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/EmptyTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/org/openflamingo/hadoop/etl/filter/filters/EndWithTest.java" afterPath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/EndWithTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/org/openflamingo/hadoop/etl/filter/filters/EqualsTest.java" afterPath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/EqualsTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/org/openflamingo/hadoop/etl/filter/filters/GreaterThanEqualsTest.java" afterPath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/GreaterThanEqualsTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/org/openflamingo/hadoop/etl/filter/filters/GreaterThanTest.java" afterPath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/GreaterThanTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/org/openflamingo/hadoop/etl/filter/filters/LeastThanEqualsTest.java" afterPath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/LeastThanEqualsTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/org/openflamingo/hadoop/etl/filter/filters/LeastThanTest.java" afterPath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/LeastThanTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/org/openflamingo/hadoop/etl/filter/filters/NotEmptyTest.java" afterPath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/NotEmptyTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/org/openflamingo/hadoop/etl/filter/filters/NotEqualsTest.java" afterPath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/NotEqualsTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/org/openflamingo/hadoop/etl/filter/filters/StartWithTest.java" afterPath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/StartWithTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/org/openflamingo/hadoop/mapreduce/clean/CleanTest.java" afterPath="$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/mapreduce/clean/CleanTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hadoop-example.iml" afterPath="$PROJECT_DIR$/hadoop-example.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/ProcessJob.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/ProcessJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/FilterClass.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/FilterClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/FilterCriteria.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/FilterCriteria.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/generate/GenerateCountMapper.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/generate/GenerateCountMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/replace/ReplaceCriteria.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/replace/ReplaceCriteria.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/utils/ArrayUtils.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/utils/ArrayUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/CommandInspector.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/CommandInspector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/ETLDriver.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/ETLDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/FrontDriver.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/FrontDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/aggregate/AggregateDriver.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/aggregate/AggregateDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/clean/CleanDriver.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/clean/CleanDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/clean/CleanMapper.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/clean/CleanMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/filter/FilterDriver.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/filter/FilterDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/filter/FilterMapper.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/filter/FilterMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/generate/GenerateDriver.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/generate/GenerateDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/generate/GenerateMapper.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/generate/GenerateMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/grep/GrepDriver.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/grep/GrepDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/group/GroupDriver.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/group/GroupDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/rank/RankDriver.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/rank/RankDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/replace/ReplaceDriver.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/replace/ReplaceDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/replace/ReplaceMapper.java" afterPath="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/replace/ReplaceMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/script/aggregate.sh" afterPath="$PROJECT_DIR$/src/script/aggregate.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/script/clean.sh" afterPath="$PROJECT_DIR$/src/script/clean.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/script/filter.sh" afterPath="$PROJECT_DIR$/src/script/filter.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/script/generate.sh" afterPath="$PROJECT_DIR$/src/script/generate.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/script/grep.sh" afterPath="$PROJECT_DIR$/src/script/grep.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/script/group.sh" afterPath="$PROJECT_DIR$/src/script/group.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/script/rank.sh" afterPath="$PROJECT_DIR$/src/script/rank.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/script/replace.sh" afterPath="$PROJECT_DIR$/src/script/replace.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ParserTest.java" afterPath="$PROJECT_DIR$/test/ParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/org/openflamingo/hadoop/etl/filter/filters/NotEqualsTest.java" afterPath="$PROJECT_DIR$/test/org/openflamingo/hadoop/etl/filter/filters/NotEqualsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/org/openflamingo/hadoop/mapreduce/clean/CleanTest.java" afterPath="$PROJECT_DIR$/test/org/openflamingo/hadoop/mapreduce/clean/CleanTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="hadoop-example.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -167,73 +240,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Empty.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/filters/Empty.java">
+      <file leaf-file-name="GenerateCountMapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/generate/GenerateCountMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Equals.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/filters/Equals.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="44" selection-start="382" selection-end="388" vertical-scroll-proportion="0.0">
+            <state line="25" column="26" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Replace.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/replace/Replace.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/replace/Replace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+            <state line="35" column="74" selection-start="965" selection-end="1017" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommandInspector.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/CommandInspector.java">
+      <file leaf-file-name="ReplaceCriteria.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/replace/ReplaceCriteria.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="7" selection-start="939" selection-end="940" vertical-scroll-proportion="0.14423077">
+            <state line="47" column="0" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FrontDriver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/FrontDriver.java">
+      <file leaf-file-name="Filter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/Filter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0">
+            <state line="3" column="25" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ETLObjectHouse.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/ETLObjectHouse.java">
+      <file leaf-file-name="FilterClass.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/FilterClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="741" selection-end="869" vertical-scroll-proportion="0.0">
+            <state line="15" column="6" selection-start="357" selection-end="357" vertical-scroll-proportion="0.24107143">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProcessJob.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/ProcessJob.java">
+      <file leaf-file-name="List.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/jdk1.6.0_33/src.zip!/java/util/List.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="7" selection-start="1795" selection-end="1795" vertical-scroll-proportion="0.0">
+            <state line="86" column="13" selection-start="4103" selection-end="4103" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ETLDriver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/ETLDriver.java">
+      <file leaf-file-name="FilterCriteria.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/FilterCriteria.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="26" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
+            <state line="16" column="27" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilterModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/FilterModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="18" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -262,22 +335,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/script/filter.sh" />
-        <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/aggregate/AggregateDriver.java" />
-        <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/clean/CleanDriver.java" />
-        <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/filter/FilterDriver.java" />
-        <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/grep/GrepDriver.java" />
-        <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/group/GroupDriver.java" />
-        <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/rank/RankDriver.java" />
-        <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/replace/ReplaceDriver.java" />
-        <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/generate/GenerateDriver.java" />
         <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/generate/GenerateMapper.java" />
         <option value="$PROJECT_DIR$/src/script/generate.sh" />
         <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/CommandInspector.java" />
         <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/FrontDriver.java" />
         <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/ETLDriver.java" />
-        <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/ETLObjectHouse.java" />
         <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/ProcessJob.java" />
+        <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/ETLObjectHouse.java" />
+        <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/FilterModel.java" />
+        <option value="$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/FilterCriteria.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/generate/GenerateCountMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/generate/GenerateMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/replace/Replace.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/replace/ReplaceCriteria.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/Filter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/FilterClass.java" />
       </list>
     </option>
   </component>
@@ -320,6 +393,46 @@
           <option name="myItemId" value="Plugins" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="resources" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Hadoop Example Project" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="compiler" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Hadoop Example Project" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="antrun" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
+        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -343,8 +456,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="-5" />
-    <option name="width" value="1922" />
-    <option name="height" value="1086" />
+    <option name="width" value="1368" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -502,7 +615,25 @@
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop-example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hadoop-ETL" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
           </PATH>
@@ -519,18 +650,12 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hadoop-example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hadoop-ETL" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -549,6 +674,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -574,11 +707,53 @@
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="hadoop" />
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="etl" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop-example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hadoop-ETL" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="etl" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="filter" />
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
           </PATH>
@@ -612,16 +787,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="SDKs" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="300" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="303" />
-    <property name="OverrideImplement.combined" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="300" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="303" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="300" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="310" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="933" />
@@ -635,19 +810,19 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/test/org/openflamingo/hadoop/etl/filter" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/test/org/openflamingo/hadoop/etl/filter" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="options.lastSelected" value="preferences.lookFeel" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -668,6 +843,10 @@
       <recent name="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/replace" />
       <recent name="$PROJECT_DIR$/src/script" />
       <recent name="$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/aggregate" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/test/resource" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.ParserTest.adsfs">
@@ -873,24 +1052,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -917,6 +1078,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1039,7 +1218,11 @@
       <created>1344615097501</created>
       <updated>1344615097502</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Terminal parameters change with the change of protocol&#10;">
+      <created>1345058428217</created>
+      <updated>1345058428217</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1063,11 +1246,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-5" width="1922" height="1086" extended-state="6" />
+    <frame x="-1" y="-5" width="1368" height="774" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.6722338" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23429541" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23374613" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.6722338" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1077,13 +1260,13 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22954546" sideWeight="0.13777089" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.6722338" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26409185" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32150313" sideWeight="0.47878787" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21826625" sideWeight="0.47878787" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cloverage" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21482602" sideWeight="0.13622291" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1380597" sideWeight="0.6784969" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20272315" sideWeight="0.78173375" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39908952" sideWeight="0.6722338" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16311301" sideWeight="0.6784969" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22919819" sideWeight="0.7662539" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16408668" sideWeight="0.48560607" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Test Runs" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.8359133" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="-9" y="19" width="1384" height="758" />
@@ -1132,7 +1315,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="filters test code complite&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="클래스, 메소드 주석 추가" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1151,6 +1334,8 @@
     <MESSAGE value="generate unique key complite" />
     <MESSAGE value="rank complite" />
     <MESSAGE value="filters test code complite&#10;" />
+    <MESSAGE value="Terminal parameters change with the change of protocol&#10;" />
+    <MESSAGE value="클래스, 메소드 주석 추가" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1194,114 +1379,84 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/script/generate.sh">
+    <entry file="jar:///usr/lib/jvm/jdk1.6.0_33/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="91" column="25" selection-start="3593" selection-end="3599" vertical-scroll-proportion="-3.99823" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/utils/ArrayUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/CommandInspector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="52" column="40" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/utils/RowUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/util/ArrayUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="42" column="52" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.086538464" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/Filter.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resource/org/openflamingo/hadoop/etl/filter/filters/EmptyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="21" column="24" selection-start="520" selection-end="520" vertical-scroll-proportion="0.07692308" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/filters/Empty.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/ETLObjectHouse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="65" column="0" selection-start="2111" selection-end="2111" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/filter/filters/Equals.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/ProcessJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="44" selection-start="382" selection-end="388" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="106" column="8" selection-start="3059" selection-end="3161" vertical-scroll-proportion="0.5622318" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/replace/Replace.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="22" column="39" selection-start="871" selection-end="871" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-core/1.0.3/hadoop-core-1.0.3.jar!/org/apache/hadoop/mapreduce/Job.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/mapreduce/generate/GenerateMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="16" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.7258065">
-          <folding />
-        </state>
+        <state line="47" column="20" selection-start="1371" selection-end="1371" vertical-scroll-proportion="1.7660944" />
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-cli/commons-cli/1.2/commons-cli-1.2-sources.jar!/org/apache/commons/cli/CommandLine.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/generate/GenerateCountMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="13" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.5744681">
-          <folding />
-        </state>
+        <state line="25" column="26" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/ETLDriver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/replace/Replace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="26" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="35" column="74" selection-start="965" selection-end="1017" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/FrontDriver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/replace/ReplaceCriteria.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="47" column="0" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/ETLObjectHouse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/Filter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="741" selection-end="869" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="25" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.6.0_33/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="17" selection-start="4126" selection-end="4126" vertical-scroll-proportion="-2.597015">
-          <folding />
-        </state>
+        <state line="86" column="13" selection-start="4103" selection-end="4103" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.6.0_33/src.zip!/java/lang/String.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/FilterCriteria.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="25" selection-start="3593" selection-end="3599" vertical-scroll-proportion="-3.99823">
-          <folding />
-        </state>
+        <state line="16" column="27" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/etl/ProcessJob.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/FilterModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="7" selection-start="1795" selection-end="1795" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="18" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/openflamingo/hadoop/mapreduce/CommandInspector.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/openflamingo/hadoop/etl/filter/FilterClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="7" selection-start="939" selection-end="940" vertical-scroll-proportion="0.14423077">
+        <state line="15" column="6" selection-start="357" selection-end="357" vertical-scroll-proportion="0.24107143">
           <folding />
         </state>
       </provider>
